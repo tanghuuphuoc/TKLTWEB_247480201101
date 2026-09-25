@@ -8,13 +8,26 @@
     <script>
         document.write("In ra màn hình ");
         var diem, xeploai;
-        diem= 10;
+        diem= 2;
         if(diem>8.5){
             xeploai = "Giỏi";
             document.write("<br>");
             document.write(xeploai);
         }
         else if(diem >=7){
+            xeploai = "khá";
+            document.write("<br>");
+            document.write(xeploai);
+        }
+        else if(diem >=5){
+            xeploai = "Trung bình";
+            document.write("<br>");
+            document.write(xeploai);
+        }
+        else{
+            xeploai = "Yếu";
+            document.write("<br>");
+            document.write(xeploai); 
         }
     </script>
 </body>
