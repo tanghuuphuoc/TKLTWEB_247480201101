@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<BODY>
+  <HTML>
+    <HEAD> </HEAD>
+        <script language="JavaScript">
+            // Hàm hiển thị thông báo lấy giá trị từ textbox
+            function HienThiThongBao() {
+                // Lấy giá trị của textbox có name là "txtthongbao"
+                var noiDung = document.getElementsByName("txtthongbao")[0].value;
+                // Hiển thị hộp thoại alert với nội dung vừa lấy
+                alert(noiDung);
+            }
+        </script>
+        <form>
+            <!-- Textbox có name là txtthongbao -->
+            <input type="text" name="txtthongbao" value="Hello JavaScript" size="30">
+            <br><br>
+            
+            <!-- Nút nhấn có name là Hello, value là Hello -->
+            <!-- Khi click sẽ gọi hàm HienThiThongBao() -->
+            <input type="button" name="Hello" value="Hello" onclick="HienThiThongBao()">
+        </form>
+    </BODY>
+    </HTML>
+    

@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <HTML>
+<HEAD>
+    <TITLE>Bài tập 14B - Tính toán số học với Radio</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+    <h2>Hãy nhập hai số, chọn phép tính và nhấn nút Tính</h2>
+    
+    <!-- Hộp text nhập số hạng 1 -->
+    Số hạng 1: <INPUT type="text" name="SoHang1" id="SoHang1">
+    <br><br>
+    <!-- Hộp text nhập số hạng 2 -->
+    Số hạng 2: <INPUT type="text" name="SoHang2" id="SoHang2">
+    <br><br>
+    <!-- Hộp text hiển thị kết quả -->
+    Kết quả: <INPUT type="text" name="KetQua" id="KetQua">
+    <br><br>
+    <!-- Các nút Radio chọn phép tính -->
+    <b>Chọn phép tính:</b>
+    <br>
+    <INPUT type="radio" name="PhepTinh" value="cong" id="cong" checked> <label for="cong">Cộng</label>
+    <INPUT type="radio" name="PhepTinh" value="tru" id="tru"> <label for="tru">Trừ</label>
+    <INPUT type="radio" name="PhepTinh" value="nhan" id="nhan"> <label for="nhan">Nhân</label>
+    <INPUT type="radio" name="PhepTinh" value="chia" id="chia"> <label for="chia">Chia</label>
+    <br><br>
+    <!-- Nút nhấn Tính -->
+    <INPUT type="button" name="Tinh" value="Tính" onclick="TinhToan()">
+    <script language="JavaScript">
+        function TinhToan() {
+            // Lấy giá trị từ 2 hộp text và chuyển sang dạng số
+            var so1 = parseFloat(document.getElementById("SoHang1").value);
+            var so2 = parseFloat(document.getElementById("SoHang2").value);
+            var ketQua = 0;
+            // Kiểm tra nếu người dùng chưa nhập số hoặc nhập sai định dạng
+            if (isNaN(so1) || isNaN(so2)) {
+                alert("Vui lòng nhập đúng định dạng số!");
+                return;
+            }
+            // Lấy giá trị của nút Radio đang được chọn
+            var phepTinh = "";
+            var radios = document.getElementsByName("PhepTinh");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    phepTinh = radios[i].value;
+                    break;
+                }
+            }
+            // Thực hiện phép tính dựa vào giá trị Radio
+            switch (phepTinh) {
+                case 'cong':
+                    ketQua = so1 + so2;
+                    break;
+                case 'tru':
+                    ketQua = so1 - so2;
+                    break;
+                case 'nhan':
+                    ketQua = so1 * so2;
+                    break;
+                case 'chia':
+                    // Kiểm tra chia cho 0
+                    if (so2 === 0) {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    ketQua = so1 / so2;
+                    break;
+            }
+            // Gán kết quả vào hộp text KetQua
+            document.getElementById("KetQua").value = ketQua;
+        }
+    </script>
+</BODY>
+</HTML>

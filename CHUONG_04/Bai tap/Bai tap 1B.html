@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<BODY>
+  <HTML>
+    <HEAD> </HEAD>
+        <script language="JavaScript">
+            // Khai báo biến
+            var HoTen, Lop;
+            // Nhập dữ liệu từ người dùng
+            HoTen = prompt("Bạn hãy nhập vào Họ tên sinh viên: ", "");
+            Lop = prompt("Bạn hãy nhập vào Lớp: ", "");
+            // Dòng 1: Định dạng thẻ H1, màu đỏ
+            document.write("<H1 style='color: red;'>TRƯỜNG ĐẠI HỌC BẠC LIÊU</H1>");
+            // Dòng 2: Định dạng thẻ H2, màu xanh dương
+            document.write("<H2 style='color: blue;'>KHOA CÔNG NGHỆ THÔNG TIN</H2>");
+            // Dòng 3: Định dạng thẻ Font, 14, đen, đậm (chứa thông tin Lớp)
+            document.write("<font size='14' color='black'><b>Lớp học: " + Lop + "</b></font><br>");
+            // Dòng 4 (đề ghi nhầm là Dòng 3): Định dạng thẻ Font, 14, xanh lá (chứa thông tin Họ tên)
+            document.write("<font size='14' color='green'><i>Họ tên sinh viên: " + HoTen + "</i></font>");
+        </script>
+    </BODY>
+    </HTML>
+    

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <HTML>
+    <HEAD> </HEAD>
+    <BODY>
+        <script language="JavaScript">
+            // Hàm hiển thị nội dung từ textbox txt hoten
+            function cthoten() {
+                // Lấy giá trị từ textbox có name là "txt hoten"
+                var noiDung = document.getElementsByName("txt hoten")[0].value;
+                // Hiển thị hộp thoại thông báo
+                alert(noiDung);
+            }
+            // Hàm hiển thị nội dung từ textbox txt donvi
+            function ctdonvi() {
+                // Lấy giá trị từ textbox có name là "txt donvi"
+                var noiDung = document.getElementsByName("txt donvi")[0].value;
+                // Hiển thị hộp thoại thông báo
+                alert(noiDung);
+            }
+        </script>
+        <form>
+            <!-- Textbox 1: name="txt hoten", value="Chào" -->
+            <input type="text" name="txt hoten" value="Chào" size="30">
+            <br><br>
+            <!-- Textbox 2: name="txt donvi", value="Đơn vị" -->
+            <input type="text" name="txt donvi" value="Đơn vị" size="30">
+            <br><br>
+            <!-- Nút 1: name="hoten", value="Họ tên", click gọi hàm cthoten() -->
+            <input type="button" name="hoten" value="Họ tên" onclick="cthoten()">
+            <!-- Nút 2: name="donvi", value="Đơn vị", click gọi hàm ctdonvi() -->
+            <input type="button" name="donvi" value="Đơn vị" onclick="ctdonvi()">
+        </form>
+    </BODY>
+    </HTML>
+    

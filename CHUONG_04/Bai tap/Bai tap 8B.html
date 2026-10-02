@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <HTML>
+<HEAD>
+    <TITLE>Bài tập 8B - Mở trang web bằng hàm open</TITLE>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+<BODY>
+    <script language="JavaScript">
+        var LuaChon;
+        
+        // Yêu cầu người dùng nhập lựa chọn
+        LuaChon = prompt("Bạn hãy nhập vào một số từ 1 đến 4 để mở trang web tương ứng:\n1. Đại học Bạc Liêu\n2. Đại học Cần Thơ\n3. VnDoc\n4. Mặc định (Meta.vn)", "1");
+        // Sử dụng switch-case để kiểm tra lựa chọn
+        switch (LuaChon)
+        {
+            case "1": 
+                window.open("http://blu.edu.vn"); 
+                break;
+            case "2": 
+                window.open("http://ctu.edu.vn"); 
+                break;
+            case "3": 
+                window.open("https://vndoc.com"); 
+                break;
+            case "4":
+                window.open("https://meta.vn");
+                break;
+            default: 
+                alert("Lựa chọn của bạn không hợp lệ! Hệ thống sẽ mở trang mặc định.");
+                window.open("https://meta.vn");
+        }
+    </script>
+</BODY>
+</HTML>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <HTML>
+        <HEAD> </HEAD>
+        <BODY>
+            <script language="JavaScript">
+                // Khai báo đối tượng Date
+                var D = new Date();
+                // Lấy các giá trị ngày, tháng, năm từ hệ thống
+                var ngay = D.getDate();          // Lấy ngày (1 - 31)
+                var thang = D.getMonth() + 1;    // Lấy tháng (0 - 11), cộng thêm 1 vì tháng trong JS bắt đầu từ 0
+                var nam = D.getFullYear();       // Lấy năm đầy đủ (YYYY)
+                // Hiển thị kết quả ra trang web bằng document.write
+                document.write("<h2>Thông tin ngày tháng năm hiện tại:</h2>");
+                document.write("<p>Ngày: <b>" + ngay + "</b></p>");
+                document.write("<p>Tháng: <b>" + thang + "</b></p>");
+                document.write("<p>Năm: <b>" + nam + "</b></p>");
+                // Hoặc hiển thị gộp chung trên một dòng theo định dạng ngày/tháng/năm
+                document.write("<p><b>Hôm nay là: " + ngay + "/" + thang + "/" + nam + "</b></p>");
+            </script>
+        </BODY>
+        </HTML>
+        
