@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
-$sql = "UPDATE khachhang SET namsinh='2009' WHERE makh='k013'";
+$sql = "UPDATE khachhang SET namsinh='2009' WHERE makh='k011'";
 $result = mysqli_query ($conn, $sql);
 if ($result) {
     echo "Cập nhật thành công.";
